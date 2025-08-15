@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Validação de CPF</title>
+</head>
+<body>
+<script>
+  let cpf;
+
+  while (true) {
+    cpf = prompt('Digite seu CPF (somente números, sem pontos ou traços):');
+
+    if (cpf === null) {
+      alert('Operação cancelada.');
+      break;
+    }
+
+    cpf = cpf.trim(); 
+    if (cpf.length !== 11) {
+      alert('O CPF deve conter exatamente 11 dígitos!');
+      continue;
+    }
+
+    if (isNaN(cpf)) {
+      alert('Digite apenas números!');
+      continue;
+    }
+
+    alert('CPF digitado: ' + cpf);
+    break;
+  }
+</script>
+</body>
+</html>
